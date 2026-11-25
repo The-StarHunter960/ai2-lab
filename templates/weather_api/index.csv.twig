@@ -1,6 +1,6 @@
 city,country,date,celsius,fahrenheit
 {%- for measurement in measurements -%}  
-    {{- "\n" -}},
+    {{- "\n" -}}
     {{- city -}},
     {{- country -}},
     {{- measurement.date | date('Y-m-d') -}},

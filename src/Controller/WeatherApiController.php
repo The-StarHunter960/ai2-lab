@@ -33,7 +33,7 @@ final class WeatherApiController extends AbstractController
             $lines=['city,country,date,celsius,fahrenheit'];
             foreach ($measurements as $m){
                 $lines[] = implode(',',[
-                    $city, $country, $m->getDate()->format('Y-m-d'), $m->getCelsius(),$m->getFahrenheit()
+                    $city, $country, $m->getDate()->format('Y-m-d'), $m->getCelsius(), $m->getFahrenheit(),
                 ]);
             }
             return new Response(implode("\n",$lines));
